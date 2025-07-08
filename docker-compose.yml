@@ -1,0 +1,9 @@
+services:
+    tracker-frontend:
+        build: .
+        ports:
+            - "3004:3004"
+        pull_policy: build
+        environment:
+            - PORT=3004
+        restart: unless-stopped
